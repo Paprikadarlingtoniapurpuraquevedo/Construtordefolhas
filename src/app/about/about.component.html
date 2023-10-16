@@ -95,32 +95,32 @@
         var age = document.getElementById("age").value;
         
         if(username.length < 2 || password.length < 2){
-        alert("Please input at least 6 characters of username and password");
+        alert("Dogs can count until 5, you can easily write at least 2 characters of username and password");
         return false
         }
 
         if(characters.split(', ').some(char=>password.includes(char))==false){
-        alert("Add at least one special character");
+        alert("Special characters exist, add at least one");
         return false
         }
 
         if(firstname.length < 2 || lastname.length < 2){
-        alert("Please input at least 2 characters of first name and last name");
+        alert("What have I told you about the dogs?");
         return false
         }
 
         if(email=='' || age==''){
-        alert("Just fill all the inputs!")
+        alert("For God's sake fill all the inputs!")
         return false;
         }
 
         if(password != confirmpassword) {
-        alert ("Password does not match, please try again...")
+        alert ("Password does not match and Zé Cabra sings well, please try again...")
         return false;
         }
 
         if(username.length >=6 || password.length >=6){
-        alert("Registration succefully");
+        alert("Succeful registration because you own a big enough IQ to do it");
         }
 
         var user = {
