@@ -87,5 +87,49 @@
 </style>
 
 <script>
+
+var attempt=3
+        
+        function validate(){
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if( attempt == 0){
+        document.getElementById("username").disabled = true;
+        document.getElementById("password").disabled = true;
+        document.getElementById("submit").disabled = true;
+        return false;
+        }
+
+        if (username == 'Username' || password == 'Password' || username == '' || password == ''){
+        alert ("This is when I ask if you knew all the inputs are to be filled");
+        return false;
+        }
+
+        var user = localStorage.getItem("user");
+        user = JSON.parse(user);
+
+        if ( username == user.username && password == user.password){
+        alert ("Login successfully");
+        window.location = "index.html";
+        return false;
+        }
+
+        else if (username == 'Username' || password == 'Password' || username == '' || password == ''){
+        alert ("Just fill all the inputs!");
+        }
+        
+        else{
+        attempt --;
+        alert("Wrong login, you have left "+attempt+" attempt;");
+        }
+        }
+        
+
+        function confirm(){
+        
+        window.location = "registrationpage.html";
+        return false;
+        }
   
 </script>
