@@ -110,18 +110,18 @@ var attempt=3
         user = JSON.parse(user);
 
         if ( username == user.username && password == user.password){
-        alert ("Login successfully");
+        alert ("This the moment when I recognize your successful login. Do you want a medal? Keep dreaming");
         window.location = "index.html";
         return false;
         }
 
         else if (username == 'Username' || password == 'Password' || username == '' || password == ''){
-        alert ("Just fill all the inputs!");
+        alert ("No need of sketch to ask you to fill all the inputs");
         }
         
         else{
         attempt --;
-        alert("Wrong login, you have left "+attempt+" attempt;");
+        alert("No carrots for donkeys, you have left "+attempt+" attempt;");
         }
         }
         
